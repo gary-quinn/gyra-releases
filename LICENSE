@@ -1,0 +1,61 @@
+Gyra — Proprietary Software License
+
+Copyright (c) 2025–2026 Gary Quinn. All rights reserved.
+
+This repository and the Gyra application installers distributed here are
+proprietary. No source code is published in this repository.
+
+1. Grant of license
+
+   Gary Quinn grants you a limited, non-exclusive, non-transferable,
+   revocable license to download, install, and use the Gyra application
+   on macOS for your own personal or internal business purposes.
+
+2. Restrictions
+
+   You may not, and may not permit others to:
+
+   - copy, modify, adapt, or create derivative works of the software;
+   - reverse engineer, decompile, or disassemble the software, except
+     where such activity is expressly permitted by applicable law;
+   - rent, lease, lend, sell, sublicense, redistribute, or otherwise
+     transfer the software or any installer obtained from this repository;
+   - remove or alter proprietary notices in the software or installers.
+
+3. Third-party services
+
+   Gyra is a bring-your-own-keys runtime. Your use of third-party model
+   providers and APIs is governed by those providers' terms. Gyra does
+   not provide model access, hosting, or API credentials.
+
+4. Pre-release software
+
+   Pre-release builds may be incomplete or unstable. They are provided for
+   evaluation and testing only.
+
+5. Disclaimer of warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+6. Limitation of liability
+
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, GARY QUINN SHALL NOT BE LIABLE
+   FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
+   DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR BUSINESS OPPORTUNITY, ARISING
+   FROM YOUR USE OF THE SOFTWARE.
+
+7. Termination
+
+   This license ends automatically if you breach it. On termination, you
+   must stop using the software and delete all copies in your possession.
+
+8. Changes
+
+   Future releases may be offered under updated terms. Continued use after
+   an update constitutes acceptance of the terms bundled with that release.
+
+9. Contact
+
+   Licensing questions: gary@atruedev.com
