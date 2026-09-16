@@ -25,16 +25,24 @@ Tagline: **Runtime, not the model.**
 
 Indie and solo builders who want a calm, dark-first Mac agent shell: switch providers without rewriting prompts, keep keys off disk in plain text, and run a local app first.
 
-## Download
+## Install
 
-**[Go to Releases →](https://github.com/gary-quinn/gyra-releases/releases)**
+### Homebrew (recommended)
 
-1. Open the latest release for your channel (stable or pre-release).
-2. Download the `.dmg` for macOS.
-3. Open the disk image and drag **Gyra** into Applications.
-4. On first launch, macOS may warn that the app is from an unidentified developer — open **System Settings → Privacy & Security** and choose **Open Anyway** if needed.
+```bash
+brew tap gary-quinn/tap
+brew install --cask gyra
+```
 
-Pre-releases (`beta`, `alpha`, `rc` tags) are for early testing. Prefer the latest non–pre-release build for day-to-day use.
+Homebrew 6+: first install may require `brew trust gary-quinn/tap/gyra`.
+
+### Disk image
+
+**[Releases →](https://github.com/gary-quinn/gyra-releases/releases)** — download the notarized `.dmg` (e.g. `Gyra-1.0.1.dmg` on `v0.0.1-beta8`), open, drag **Gyra** into Applications.
+
+On first launch, macOS may prompt under **System Settings → Privacy & Security** — choose **Open Anyway** if needed.
+
+Pre-releases (`beta`, `alpha`, `rc`) are for early testing.
 
 ## Requirements
 
