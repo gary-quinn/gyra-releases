@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy — Gyra</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;line-height:1.5;max-width:44rem;margin:2rem auto;padding:0 1rem;color:#111}
+table{border-collapse:collapse;width:100%} th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}
+code{font-size:.9em}
+</style>
+</head>
+<body>
+<pre># Privacy Policy — Gyra
+
+**Last updated:** 11 September 2026  
+**App:** Gyra (`com.atruedev.gyra`)  
+**Developer:** atruedev (Gary Quinn)  
+**Platform:** macOS (Mac App Store / TestFlight)
+
+This policy describes how Gyra handles information. Gyra is a **local** bring-your-own-keys (BYOK) macOS agent runtime. We do **not** operate a Gyra cloud account, cloud sync, or a multi-tenant backend for your chats or API keys.
+
+&gt; **Hosted URL:** https://gary-quinn.github.io/gyra-releases/privacy/ — public HTTPS copy for App Review and listing drafts.
+
+## 1. Summary
+
+| Topic | Practice |
+| --- | --- |
+| Account with us | None required |
+| API keys | Stored locally in **macOS Keychain**; not uploaded to atruedev |
+| Chats / memory | Stored **on your Mac** (app support database) |
+| Network | Outbound HTTPS only to **providers you configure** (your keys) |
+| Local tools / MCP | Run only after **PermissionBroker** grants; MCP stdio uses allowlisted binaries |
+| Analytics / ads | Not used by Gyra for advertising or cross-app tracking |
+| Sale of data | We do not sell personal data |
+
+## 2. Data Gyra processes on your device
+
+Gyra may process the following **on your Mac**:
+
+1. **Provider credentials** — API keys and related vault entries you enter for LLM providers (e.g. OpenAI, Anthropic, DeepSeek, OpenRouter, NVIDIA NIM). Intended storage: macOS Keychain with device-bound accessibility settings. Keys are not written into bot config files or chat transcripts by design.
+2. **Bot configuration** — names, system prompts, model choices, routing settings you create.
+3. **Conversation content** — messages you send, model replies, and tool outputs retained in local chat/memory storage under your user Library Application Support path for Gyra.
+4. **Permission decisions** — grants you make (or deny) for tools such as filesystem read, provider use, and MCP connect (sticky/session grants).
+5. **Local debug artifacts (optional)** — if enabled in a future hook/debug path, limited redacted event summaries may be stored locally; raw secrets and Authorization headers are not retained in transcripts.
+
+Gyra does **not** require you to create an atruedev account.
+
+## 3. Data sent off your device
+
+Gyra sends data off-device only when **you** use a feature that needs the network:
+
+1. **LLM providers you choose** — Chat prompts, conversation context, and tool results needed for a turn are sent over HTTPS to the provider endpoint **you** configured, authenticated with **your** API key. That traffic is governed by that provider’s privacy policy and terms, not by atruedev’s servers.
+2. **No atruedev inference cloud** — We do not run a Gyra-hosted model fleet that receives your prompts by default.
+
+We do not intentionally transmit your Keychain secrets to atruedev.
+
+## 4. Local tools, files, and MCP
+
+- **Filesystem tools** read files only within roots you allow and after a PermissionBroker grant. Reads are size-limited; contents may enter the chat transcript and therefore may be sent to your chosen LLM provider on later turns.
+- **MCP stdio** may start a local process only for an **allowlisted absolute executable path**, after an explicit MCP-connect grant. Environment variables are minimized; vault secrets are not injected into MCP env by design.
+- Gyra does not use local tools to silently exfiltrate data to atruedev.
+
+## 5. Permissions (macOS)
+
+Depending on features you enable, macOS may prompt for system permissions (e.g. network, files, accessibility/computer-use in later milestones). Those prompts are controlled by the OS. Gyra’s in-app PermissionBroker is an additional default-deny layer for agent tools.
+
+## 6. Retention
+
+- Local chat/memory and configs remain until **you** delete them or remove the app’s data.
+- Uninstalling the app may leave Application Support files and Keychain items until you remove them manually (standard macOS behavior).
+- We do not retain your chats on atruedev servers because we do not host them.
+
+## 7. Children
+
+Gyra is not directed at children under 13 (or the equivalent minimum age in your jurisdiction). Do not use the app to knowingly provide children’s personal data to third-party model providers.
+
+## 8. Your choices
+
+- Do not save an API key you do not want stored in Keychain.
+- Revoke or rotate provider keys at the provider console at any time.
+- Deny tool / MCP / provider grants in-app; default for tools is deny until you grant.
+- Delete local data by removing Gyra’s Application Support directory and Keychain items for service `com.atruedev.gyra`.
+
+## 9. Third parties
+
+Third-party AI providers and any MCP servers **you** connect are independent controllers/processors of data you send them. Review their policies before use. Marketplace or catalog features (if enabled later) will not grant MCP connect or tool permissions by themselves.
+
+## 10. International / legal bases (EEA/UK note)
+
+If you are in the EEA/UK, processing on your device for the app you chose to run is typically based on **contract / your request** (provide the local agent runtime) and **legitimate interests** in keeping the app secure. Outbound provider calls are initiated by you under that provider’s terms.
+
+## 11. Changes
+
+We may update this policy as Gyra gains features (e.g. optional local hook ingress, marketplace installs). Material changes will bump the “Last updated” date. Continued use after an update means you accept the revised policy where permitted by law.
+
+## 12. Contact
+
+Privacy questions about Gyra: **Gary Quinn / atruedev**  
+Email: **gary@atruedev.com**
+Bundle ID: `com.atruedev.gyra`
+
+---
+
+### App Store “nutrition” short answers
+
+| Question | Answer |
+| --- | --- |
+| Do you collect data linked to identity for tracking? | No |
+| Do you collect data for third-party advertising? | No |
+| Do you collect Product Interaction / Usage Data on atruedev servers? | No (local app only) |
+| Do you collect Sensitive Info / credentials on atruedev servers? | No — keys stay in Keychain on device |
+| Data used to track you? | No |
+| Data linked to you and collected by the developer? | No developer-hosted collection in current product |
+| Data not linked to you / not collected? | N/A — we are not a cloud collector; disclose provider traffic as user-directed |
+</pre>
+</body>
+</html>
